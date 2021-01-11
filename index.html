@@ -9,6 +9,30 @@
     <title>Snake Game</title>
 </head>
 <body>
-    <canvas id="snake" width="512" height="512"></canvas>
+    <h1>Snake Game</h1>
+    <div class="game-area">
+        <div id="intro">
+            <h2>Controls:</h2>
+            <p>You can use either <strong>W-A-S-D</strong> or the <strong>Arrow keys</strong> to change directions.</p>
+            <h2>Select your difficulty:</h2>
+            <p><strong>Easy:</strong> Slower snake and no barriers/walls.</p>
+            <p><strong>Hard:</strong> Faster snake and game over when collide with walls.</p>
+            <div class="difficulty-selection">
+                <select name="mode" id="mode">
+                    <option value="easy">Easy</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button onclick="startGame()">Start Game</button>
+            </div>
+        </div>
+        <canvas id="snake" width="512" height="512"></canvas>
+        <h3 id="gameover" class="hide">Game Over
+            <span>Press 'F5' to try again</span>
+        </h3>
+        <div class="game-ui">
+            <p id="points"></p>
+            <p id="display-time"></p>
+        </div>
+    </div>
 </body>
 </html>
